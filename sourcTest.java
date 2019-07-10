@@ -11,6 +11,9 @@ setting.name = 'Log Enabled';
 setting.CA_Value__c = true;
 insert setting;
 
+
+
+
 User u = [SELECT CA_Agent_Id__c FROM User WHERE Id = :UserInfo.getUserId() LIMIT 1];
 u.CA_Agent_Id__c = 'AG001';
 update u;
